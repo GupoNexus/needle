@@ -36,7 +36,6 @@
     "components/**/*.tsx",
     "hooks/**/*.ts",
     "lib/**/*.ts",
-    "db/**/*.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
@@ -46,6 +45,8 @@
     "worker",
     "examples",
     "scripts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "db",
+    "drizzle.config.ts"
   ]
 }
