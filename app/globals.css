@@ -1138,11 +1138,10 @@ footer {
 .hero > picture {
   position: absolute;
   inset: 0;
+  z-index: 0;
   opacity: 0;
-  transform: scale(1.01);
-  transition:
-    opacity 0.8s ease,
-    transform 5s ease;
+  visibility: hidden;
+  pointer-events: none;
 }
 .hero > picture img {
   display: block;
@@ -1151,8 +1150,24 @@ footer {
   object-fit: cover;
 }
 .hero > picture.active {
-  opacity: 1;
-  transform: scale(1.06);
+  z-index: 1;
+  opacity: 1 !important;
+  visibility: visible;
+  animation: heroZoom 5s ease-out both;
+}
+.hero .shade {
+  z-index: 2;
+}
+.hero .heroCopy {
+  z-index: 3;
+}
+@keyframes heroZoom {
+  from {
+    transform: scale(1.01);
+  }
+  to {
+    transform: scale(1.06);
+  }
 }
 .hero.brandHero .shade,
 .hero.brandHero .heroCopy {
@@ -1162,6 +1177,10 @@ footer {
 }
 .hero.brandHero > picture img {
   object-position: center;
+}
+.hero.brandHero > picture.active {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 .heroDots {
   position: absolute;
