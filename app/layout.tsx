@@ -1,3 +1,3 @@
 import type {Metadata} from "next";import "./globals.css";
-export const metadata:Metadata={title:"Needle Móveis | Conforto e design",description:"Sofás, poltronas, colchões e móveis com entrega em todo o Rio de Janeiro."};
+export const metadata:Metadata={metadataBase:new URL("https://needle.sitemodelo.shop"),title:"Needle Móveis e Colchões | Rio de Janeiro",description:"Sofás, poltronas, mesas, colchões e móveis com atendimento em Taquara e Bangu e entrega em todo o Rio de Janeiro.",alternates:{canonical:"/"},openGraph:{title:"Needle Móveis e Colchões",description:"Conforto e design para transformar o seu lar.",url:"/",siteName:"Needle Móveis",locale:"pt_BR",type:"website",images:[{url:"/needle/2026-07-02_11-06-38_DaScbLvulw1.jpg",width:504,height:504,alt:"Sofá Needle em ambiente decorado"}]},robots:{index:true,follow:true}};
 export default function Layout({children}:{children:React.ReactNode}){return <html lang="pt-BR"><body>{children}</body></html>}
