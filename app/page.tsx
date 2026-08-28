@@ -87,18 +87,25 @@ const heroSlides = [
     desktop: "banner-needle-desktop.jpg",
     mobile: "banner-needle-mobile.jpg",
     alt: "Ambiente Needle com mesa de jantar e sala decorada",
+    branded: true,
   },
   {
-    desktop: "2026-07-08_10-51-01_Dah3fBpuSmL.jpg",
-    alt: "Móveis Needle em ambiente decorado",
+    desktop: "banner-paris-desktop.jpg",
+    mobile: "banner-paris-mobile.jpg",
+    alt: "Lançamento Sofá Paris da Needle Móveis",
+    branded: true,
   },
   {
-    desktop: "2026-07-03_11-05-33_DaVBIQUuuQ2.jpg",
-    alt: "Móveis Needle em ambiente decorado",
+    desktop: "banner-mesa-desktop.jpg",
+    mobile: "banner-mesa-mobile.jpg",
+    alt: "Mesa de jantar Needle em ambiente decorado",
+    branded: true,
   },
   {
-    desktop: "2026-07-02_11-06-38_DaScbLvulw1.jpg",
-    alt: "Móveis Needle em ambiente decorado",
+    desktop: "banner-sofa-desktop.jpg",
+    mobile: "banner-sofa-mobile.jpg",
+    alt: "Sofá cinza Needle em sala de estar",
+    branded: false,
   },
 ];
 const navGroups = [
@@ -313,7 +320,7 @@ export default function Home() {
           </a>
         </nav>
       </header>
-      <section className={`hero ${hero === 0 ? "brandHero" : ""}`}>
+      <section className={`hero ${heroSlides[hero].branded ? "brandHero" : ""}`}>
         {heroSlides.map((slide, index) => (
           <picture
             key={slide.desktop}
